@@ -4,7 +4,7 @@ import java.util.Random;
 public class Cards {
 	private String name,position;
 	private int defence,control,attack;
-	private static ArrayList<Cards> deck = new ArrayList<Cards>();
+	public static ArrayList<Cards> deck = new ArrayList<Cards>();
 	
 	
 	
@@ -18,23 +18,15 @@ public class Cards {
 	}
 	
 	
-	
-	
-	public static ArrayList<Cards> getDeck() {
+	public static   ArrayList<Cards> getDeck() {
 		return deck;
 	}
 
-
-
-
-	public static void setDeck(ArrayList<Cards> deck) {
+	public  void setDeck(ArrayList<Cards> deck) {
 		Cards.deck = deck;
 	}
 
-
-
-
-	public String getName() {
+public String getName() {
 		return name;
 	}
 	public void setName(String name) {
@@ -57,6 +49,7 @@ public class Cards {
 	}
 	public void setControl(int control) {
 		this.control = control;
+		
 	}
 	public int getAttack() {
 		return attack;
@@ -67,6 +60,7 @@ public class Cards {
 	
 	public static Cards dealCard(ArrayList<Cards> arrayList) { //deals cards to players
 		  Random rand = new Random();
+		  
 		  
 		  Cards randomCard = deck.get(rand.nextInt(deck.size()));
 		  deck.remove(randomCard);
